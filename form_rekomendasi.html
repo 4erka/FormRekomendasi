@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Rekomendasi</title>
+	<script type="text/javascript">
+		document.forms[0].addEventListener('submit', function () {
+    		window.fetch('form_rekomendasi.html', {
+        	method: 'post',
+        	body: new FormData(document.forms[0]))
+    		}).then(function () { /* login completed */ })
+    	// no return false!!
+		});
+	</script>
+</head>
+<body style="background-color: #D3D3D3">
+	<h1 style="text-align: center;">
+		FORM MAHASISWA
+	</h1>
+	<form id="FormSiswa" method="post" style="text-align: left; margin: 25px 575px 20px 575px; padding: 25px; padding-top: 50px">
+		<p> Nama Mahasiswa :
+			<label for="Nama Mahasiswa">
+				<input type="text" name="inp_nammas" id="inp_nammas" style="float: right; border-radius: 5px">
+			</label>
+		</p>
+		<p> NIM :
+			<label for="NIM">
+				<input type="text" name="inp_nim" id="inp_nim" style="float: right; border-radius: 5px">
+			</label>
+		</p>
+		<p> Mata Kuliah :
+			<label for="Mata Kuliah">
+				<input type="text" name="inp_matkul" id="inp_matkul" style="float: right; border-radius: 5px">
+			</label>
+		</p>
+		<p> Dosen :
+			<label for="Dosen">
+				<input type="text" name="inp_dosen" id="inp_dosen" style="float: right; border-radius: 5px">
+			</label>
+		</p>
+		<!--
+		<center>
+			<input value="Login" type="submit">
+		</center>
+		-->
+	</form>
+</body>
+</html>
